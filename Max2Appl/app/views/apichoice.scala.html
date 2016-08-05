@@ -1,0 +1,24 @@
+
+@(message: String)
+
+@main("Welcome to Play") {
+
+    @*
+     * Get an `Html` object by calling the built-in Play welcome
+     * template and passing a `String` message.
+     *@
+ <!--     @play20.welcome(message, style = "Java") -->
+ 	@message
+
+	<a target="_blank" href="/colorDetails">ColorDetails</a>
+	<a target="_blank" href="/colorDetailsWithNames">ColorDetailsWithNames</a>
+	<a target="_blank" href="/getAllManualEntryRecords">GetRecords</a>
+	<!--  <a target="_blank" href="/venueNames">VenueNames</a> -->
+	<br>
+	<form action="@routes.HomeController.getVenueNames()" method="get">
+		<input type="text" name="city"/>
+		<input type="text" name="state"/>
+		<input type="submit" />
+	</form>
+	
+}

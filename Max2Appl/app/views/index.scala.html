@@ -1,0 +1,72 @@
+@*
+ * This template takes a single argument, a String containing a
+ * message to display.
+ *@
+@(message: String)
+
+@*
+ * Call the `main` template with two arguments. The first
+ * argument is a `String` with the title of the page, the second
+ * argument is an `Html` object containing the body of the page.
+ *@
+@main("Welcome to Play") {
+
+    @*
+     * Get an `Html` object by calling the built-in Play welcome
+     * template and passing a `String` message.
+     *@
+ <!--     @play20.welcome(message, style = "Java") -->
+ 	@message
+ 	
+ 		<head>
+		  <title>Index Page</title>
+		  <meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		  <style>
+		  	form {
+				    width: 300px;
+				    margin: 0 auto;
+				    padding: 50px;
+			        font-size: 32px;
+			        font-weight: bold;
+			        text-align: center;
+				}
+			
+			div.two{
+					width: 100px;
+					height: 100px;
+			}
+		  </style>
+		</head>
+ 	<br>
+ 	<br>
+ 	<br>
+ 	<br>
+ 	<br>
+ 	<br>
+ 	<br>
+ 	<br>
+ 	<br>
+ 	<br>
+ 	<br>
+ 	<div class="container">  
+	 	<form action="@routes.HomeController.uploadFile()" method="post" enctype="multipart/form-data">
+		    <div class="form-horizontal">
+			    <div class=2>
+				    <label for="exampleInputFile">File input</label>
+				    <input type="file" class="form-control-file" name="csvFile" aria-describedby="fileHelp">
+				    <button type="submit" class="btn btn-primary form">Submit</button>
+				</div>
+			 </div>
+		
+		    <p>
+		        
+		    </p>
+		</form>
+	
+ 	</div> 
+
+}
